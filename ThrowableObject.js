@@ -2,7 +2,7 @@
 
 	function ThrowableObject() {
 		Rectangle.call(this);
-		this.setFillStyle("red");
+		this.setFillStyle("white");
 	}
 
 	ThrowableObject.prototype.onMouseDown = function(mouse) {

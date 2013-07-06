@@ -24,23 +24,23 @@ function main() {
 	var background = new M.Layer(),
 		gameLayer = new M.Layer();
 
-	var wallLeft = new Rectangle(),
-		wallRight = new Rectangle(),
-		floor = new Rectangle();
+	// var wallLeft = new Rectangle(),
+		// wallRight = new Rectangle(),
+		// floor = new Rectangle();
 
-	wallLeft.setSize(38, 150);
-	wallLeft.setLocation(19, 268);
+	// wallLeft.setSize(38, 150);
+	// wallLeft.setLocation(19, 268);
 
-	wallRight.setSize(38, 150);
-	wallRight.setLocation(506, 268);
+	// wallRight.setSize(38, 150);
+	// wallRight.setLocation(506, 268);
 
-	floor.setSize(452, 20);
-	floor.setLocation(262, 289);
-	floor.setFillStyle("orange");
+	// floor.setSize(452, 20);
+	// floor.setLocation(262, 289);
+	// floor.setFillStyle("orange");
 
-	background.push(wallLeft);
-	background.push(wallRight);	
-	background.push(floor);
+	// background.push(wallLeft);
+	// background.push(wallRight);	
+	// background.push(floor);
 
 	var meat = new Game.ThrowableObject();
 
