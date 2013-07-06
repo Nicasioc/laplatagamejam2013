@@ -21,7 +21,8 @@ function main() {
 		// bb: "http://puzzlingideas.com.ar/match/images/compatible_blackberry.png",
 	// });
 
-	var background = new M.Layer();
+	var background = new M.Layer(),
+		gameLayer = new M.Layer();
 
 	var wallLeft = new Rectangle(),
 		wallRight = new Rectangle(),
@@ -41,6 +42,14 @@ function main() {
 	background.push(wallRight);	
 	background.push(floor);
 
+	var meat = new Game.Meat();
+
+	meat.setSize(60, 20);
+	meat.setLocation(70, 270);
+	
+	gameLayer.push(meat);
+
 	M.pushLayer(background);
+	M.pushLayer(gameLayer);
 
 }
