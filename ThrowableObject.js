@@ -1,8 +1,6 @@
-(function(M, Rectangle, Game, Math2d) {
+(function(M, Game, Math2d) {
 
 	function ThrowableObject() {
-		Rectangle.call(this);
-		this.setFillStyle("white");
 	}
 
 	ThrowableObject.prototype.onMouseDown = function(mouse) {
@@ -26,8 +24,6 @@
 		
 	};
 
-	M.extend(ThrowableObject, Rectangle);
-
 	Game.ThrowableObject = ThrowableObject;
 
-})(window.M, window.M.renderers.Rectangle, window.Game, window.M.math2d);
+})(window.M, window.Game, window.M.math2d);
