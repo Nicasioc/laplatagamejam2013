@@ -1,9 +1,11 @@
-(function(M, Rectangle, Game) {
+(function(M, ThrowableObject) {
 
 	function Fly() {
+		ThrowableObject.call(this);
 	}
 
+	M.extend(Fly, ThrowableObject);
 
 	Game.Fly = Fly;
 
-})(window.M, window.M.renderers.Rectangle, window.Game);
+})(window.M, window.Game.ThrowableObject);

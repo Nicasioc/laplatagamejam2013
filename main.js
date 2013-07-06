@@ -42,7 +42,7 @@ function main() {
 	background.push(wallRight);	
 	background.push(floor);
 
-	var meat = new Game.Meat();
+	var meat = new Game.ThrowableObject();
 
 	meat.setSize(60, 20);
 	meat.setLocation(70, 270);
