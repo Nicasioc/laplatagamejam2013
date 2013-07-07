@@ -4,8 +4,8 @@
 		Sprite.call(this);
 	}
 
-	M.extend(Fly, ThrowableObject);
 	M.extend(Fly, Sprite);
+	M.extend(Fly, ThrowableObject);
 
 	Game.Fly = Fly;
 

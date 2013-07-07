@@ -28,14 +28,11 @@ function loadLevel(level) {
 	var background = new M.Layer(),
 		gameLayer = new M.Layer();
 
-
 	for ( var i = 0; i < level.data.length; i++ ) {
 		var current = level.data[i],
 			meat = new Game.Meat(current.path);
-			meat.setLocation( current.x, current.y );
-			//meat.setHeight(current.height),
-			//meat.setWidth(current.width),
-			meat.setRotation(current.rotation);
+			meat.setLocation(parseInt(current.x), parseInt(current.y));
+			meat.setRotation(parseInt(current.rotation));
 			gameLayer.push(meat);
 	}
 

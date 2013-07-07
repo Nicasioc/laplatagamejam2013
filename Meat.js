@@ -4,8 +4,8 @@
 		Sprite.call(this, spriteName);
 	}
 
-	M.extend(Meat, ThrowableObject);
 	M.extend(Meat, Sprite);
+	M.extend(Meat, ThrowableObject);
 
 	Game.Meat = Meat;
 
