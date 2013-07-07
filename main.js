@@ -1,44 +1,46 @@
 function main() {
 
-	var Rectangle = M.renderers.Rectangle,
-		Sprite = M.renderers.Sprite;
-
 	M.start();
-
-	// M.setCanvasSize(window.screen.width, window.screen.height);
 	
 	M.sprites.onAllImagesLoaded.addEventListener(function() {
 		startGame();
 	});
 
 	M.sprites.load({
-		steak: "/assets/asado/steak.png"
+		chorizo: "/assets/asado/chorizo.png",
+		morcilla: "/assets/asado/morcilla.png",
+		tira: "/assets/asado/tira.png",
+		vacio: "/assets/asado/vacio.png"
 	});
 
 }
 
 function startGame() {
 
+	loadLevel(new Game.Level1());
+
+}
+
+function loadLevel(level) {
+
+	M.removeScene();
+
 	var background = new M.Layer(),
 		gameLayer = new M.Layer();
 
-	
-	var meat = new Game.Meat();
 
-	meat.setImage("steak");
-	meat.setSize(84*2, 46*2);
-	meat.setLocation(150, 170);
-	
-	gameLayer.push(meat);
-	var meat = new Game.Meat();
-
-	meat.setImage("steak");
-	meat.setSize(84, 46);
-	meat.setLocation(300, 185);
-	
-	gameLayer.push(meat);
+	for ( var i = 0; i < level.data.length; i++ ) {
+		var current = level.data[i],
+			meat = new Game.Meat(current.path);
+			meat.setLocation( current.x, current.y );
+			//meat.setHeight(current.height),
+			//meat.setWidth(current.width),
+			meat.setRotation(current.rotation);
+			gameLayer.push(meat);
+	}
 
 	M.pushLayer(background);
 	M.pushLayer(gameLayer);
+
 
 }

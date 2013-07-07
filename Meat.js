@@ -1,7 +1,7 @@
 (function(M, ThrowableObject, Sprite) {
 
-	function Meat() {
-		Sprite.call(this);
+	function Meat(spriteName) {
+		Sprite.call(this, spriteName);
 	}
 
 	M.extend(Meat, ThrowableObject);

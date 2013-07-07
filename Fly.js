@@ -9,4 +9,4 @@
 
 	Game.Fly = Fly;
 
-})(window.M, window.Game.ThrowableObject, window.M.Sprite);
+})(window.M, window.Game.ThrowableObject, window.M.renderers.Sprite);
